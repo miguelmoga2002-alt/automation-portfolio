@@ -1,0 +1,15 @@
+{
+  "name": "automation-portfolio",
+  "version": "1.0.0",
+  "description": "Automation systems I designed and run: AI-search visibility panel (GEO), Google Business Profile audit and a time-zone-aware outreach scheduler. Runnable demos on fictional data.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "demo:geo": "node geo-visibility-panel/demo/run.mjs",
+    "demo:gbp": "node gbp-audit/demo/run.mjs",
+    "demo:outreach": "node outreach-scheduler/demo/run.mjs",
+    "test": "node --test"
+  },
+  "license": "MIT",
+  "author": "Miguel Morales García"
+}

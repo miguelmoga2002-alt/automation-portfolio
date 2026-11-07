@@ -1,0 +1,21 @@
+{
+  "questions": [
+    { "n": 1, "text": "Which company should I hire to replace aluminium windows in Barcelona?", "type": "Money" },
+    { "n": 2, "text": "How much does it cost to enclose a terrace and what does the price depend on?", "type": "Informational" }
+  ],
+  "current": [
+    { "n": 1, "platform": "ChatGPT", "text": "Good options are Harbor Glazing, Northwind Windows and Summit Frames. You can compare reviews on TradeFinder.", "links": ["https://www.tradefinder.example/barcelona", "https://northwindwindows.example/windows-barcelona"],
+      "model": ["Harbor Glazing", "Northwind Windows", "Summit Frames", "Crystal Bay Installers"] },
+    { "n": 1, "platform": "Perplexity", "text": "Summit Frames is well rated. BigBox DIY also installs windows.", "links": ["https://summitframes.example"],
+      "model": ["Summit Frames", "BigBox DIY"] },
+    { "n": 2, "platform": "ChatGPT", "text": "Prices depend on size and glass type. Northwind Windows publishes a price guide.", "links": ["https://northwindwindows.example/terrace-prices"],
+      "model": ["Northwind Windows"] },
+    { "n": 2, "platform": "Perplexity", "text": "It usually depends on the size, the glass and permits.", "links": [], "model": [] }
+  ],
+  "previous": [
+    { "n": 1, "platform": "ChatGPT", "mentioned": false, "competitors": ["Harbor Glazing"] },
+    { "n": 1, "platform": "Perplexity", "mentioned": false, "competitors": ["Summit Frames"] },
+    { "n": 2, "platform": "ChatGPT", "mentioned": true, "competitors": [] },
+    { "n": 2, "platform": "Perplexity", "mentioned": false, "competitors": [] }
+  ]
+}

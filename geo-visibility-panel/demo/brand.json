@@ -1,0 +1,14 @@
+{
+  "_note": "Fictional brand, competitors and answers. The real panel tracks the author's family business.",
+  "domain": "northwindwindows.example",
+  "detector": "northwind\\s*windows",
+  "competitors": [
+    { "name": "Harbor Glazing", "variants": ["harbor glazing"] },
+    { "name": "Summit Frames", "variants": ["summit frames", "summit"] },
+    { "name": "BigBox DIY", "variants": ["bigbox diy", "bigbox"] }
+  ],
+  "directories": [
+    { "name": "TradeFinder", "domains": ["tradefinder.example"], "texts": ["tradefinder"] },
+    { "name": "Maps", "domains": ["maps.example"], "texts": ["google maps"] }
+  ]
+}

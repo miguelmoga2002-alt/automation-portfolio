@@ -1,0 +1,17 @@
+{
+  "_note": "Fictional listings. Text as it appears on a profile page in English.",
+  "listings": [
+    { "name": "Northwind Windows (Seaside branch)", "own": true, "expectedCampaign": "gbp-seaside",
+      "overview": "Northwind Windows\n5.0\n(2)\nAluminium window installer\nUpdates\nNew showroom open\n3 weeks ago",
+      "reviews": "Anna P.\n2 months ago\nGreat job, on time.\nResponse from the owner\n2 months ago\nThanks Anna!\nLuis G.\n5 months ago\nVery professional.",
+      "website": "https://northwindwindows.example/?utm_source=gbp&utm_campaign=gbp-hillside" },
+    { "name": "Harbor Glazing", "own": false,
+      "overview": "Harbor Glazing\n4.6\n(184)\nGlass & mirror shop\nUpdates\nSpring offer\n1 week ago",
+      "reviews": "Marta S.\n3 days ago\nFast quote.\nResponse from the owner\n2 days ago\nThank you!\nJordi R.\n1 week ago\nGood work.\nResponse from the owner\n6 days ago\nThanks Jordi!",
+      "website": "https://harborglazing.example/barcelona?utm_source=gbp&utm_campaign=gbp-barcelona" },
+    { "name": "Summit Frames", "own": false,
+      "overview": "Summit Frames\n4.1\n(37)\nWindow supplier\nClaim this business",
+      "reviews": "Pere M.\n8 months ago\nOk.\nSara T.\n1 year ago\nSlow but fine.",
+      "website": "" }
+  ]
+}
