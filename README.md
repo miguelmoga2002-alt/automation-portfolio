@@ -1,8 +1,7 @@
 # Automation Portfolio
 
-**Three automation systems I designed and run in production for my own work: a monthly panel
-that measures whether AI assistants recommend my family's business, a Google Business Profile
-audit of its local competitors, and a time-zone-aware outreach scheduler for my job search.**
+**The systems I design and run in production, in one place: market intelligence, a sales
+operating system, AI visibility tracking, local SEO audits and outreach scheduling.**
 
 I work in sales. My programming is self-taught: I design each system, set its rules, decide every
 trade-off and run it day to day, and I write the code with AI assistants, choosing a different
@@ -10,24 +9,19 @@ one depending on the part of the system (coding, data extraction, analysis). Eve
 tested and verified on the real machine before it counts as done; how I work is in
 [docs/how-i-build.md](docs/how-i-build.md).
 
-> **What this repo is.** A public, sanitized view of private production code. Each folder
-> explains a system and contains a small runnable module from it, with tests, on fictional data.
-> Browser automation, credentials, real competitors, contacts and client data stay private.
+## Projects
 
-My larger project, a 24/7 market-intelligence system over 12 marketplaces in 9 countries, has its
-own repo: [market-intelligence-agent](https://github.com/miguelmoga2002-alt/market-intelligence-agent).
-
-## At a glance
-
-| System | What it does | In production |
+| Project | What it does | In production |
 |---|---|---|
-| [**GEO visibility panel**](geo-visibility-panel/) | Asks 6 AI assistants the questions a customer would ask, every month, and measures whether they recommend the business, in what position, next to which competitors and citing which sources | 26 questions × 6 AI surfaces = 156 answers a month; November 2026 round: 156 of 156 valid |
-| [**GBP audit**](gbp-audit/) | Reads the Google Maps profiles of the business and its competitors and turns them into a list of concrete gaps | 13 profiles a month; first run found our own website link with the wrong tracking campaign |
-| [**Outreach scheduler**](outreach-scheduler/) | Sends a daily queue of connection requests in each country's local morning, with human pacing, and learns who accepted | 30 a day to Dublin and Dubai, each between 07:00 and 08:00 local time, DST-safe |
+| [**market-intelligence-agent**](https://github.com/miguelmoga2002-alt/market-intelligence-agent) | 24/7 market intelligence over second-hand marketplaces, with a local LLM agent that answers questions over the data | 700K+ listings from 12 marketplaces in 9 countries, ~5K new a day |
+| [**revenue-os-public-preview**](https://github.com/miguelmoga2002-alt/revenue-os-public-preview) | The sales operating system I'm building for our family businesses: pipeline, account view, next-action focus, CRM migration | Public technical preview, synthetic data |
+| [**ai-visibility-tracker**](https://github.com/miguelmoga2002-alt/ai-visibility-tracker) | Asks 6 AI assistants the questions a customer would ask, every month, and measures whether they recommend the business | 156 answers a month; November 2026 round: 156 of 156 valid |
+| [**gbp-audit**](https://github.com/miguelmoga2002-alt/gbp-audit) | Reads the Google Maps profiles of a business and its competitors and turns them into a list of concrete gaps | 13 profiles a month |
+| [**timezone-outreach-scheduler**](https://github.com/miguelmoga2002-alt/timezone-outreach-scheduler) | Plans each market's daily outreach inside its own local morning, at a human pace | 30 contacts a day across two markets, DST-safe |
 
-All three share the same backbone: scheduled jobs on one Windows server, raw evidence saved to
-disk before anything is analyzed, results published to Notion or Google Sheets, and Telegram for
-anything that needs me.
+The tracker, the audit and the scheduler share the same backbone: scheduled jobs on one Windows
+server, raw evidence saved to disk before anything is analyzed, results published to Notion or
+Google Sheets, and Telegram for anything that needs me.
 
 ```mermaid
 flowchart LR
@@ -55,31 +49,16 @@ flowchart LR
 - **Configuration over code.** Site selectors, questions, competitors and time windows live in
   config files: a site redesign or a new country is a config change.
 
-## Run the demos
-
-Node.js 20 or newer, no dependencies.
-
-```bash
-npm test                 # 15 tests across the three modules
-npm run demo:geo         # analyze fictional AI answers and compute share of voice
-npm run demo:gbp         # audit three fictional Google Business Profiles
-npm run demo:outreach    # plan a day of outreach across Dublin and Dubai time zones
-```
-
-## Repository layout
-
-```
-geo-visibility-panel/   answer analyzer and share-of-voice report (+ demo data)
-gbp-audit/              profile signals and gap list (+ demo data)
-outreach-scheduler/     local-time windows and pacing (+ demo)
-test/                   node:test suites
-docs/how-i-build.md     how I design, build and verify these systems
-```
+Each project has its own README and a runnable demo.
 
 ## Tech stack
 
-Node.js, PowerShell, Playwright, Ollama with Qwen 2.5 14B (local), Notion API, Google Sheets
-API, Telegram Bot API, Windows Task Scheduler, Git.
+Node.js, Python (FastAPI), PostgreSQL, PowerShell, Playwright, Ollama with Qwen (local), Notion API,
+Google Sheets API, Telegram Bot API, Docker, GitHub Actions, Windows Task Scheduler, Git.
+
+## Contact
+
+[miguelmoralesgarcia.es](https://miguelmoralesgarcia.es) · [LinkedIn](https://www.linkedin.com/in/miguelmoralesgarcia/)
 
 ## License
 
